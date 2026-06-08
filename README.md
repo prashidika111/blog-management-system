@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# blog-management-system
+First experience with Next.js. This is a very basic blog management system built using Prisma ORM Library and SQLite for local db and shadcn/ui for UI. I explored and practised system architecture for both admin and visitor's ends parallelly. 
+Concepts explored:
+Next.js App Router
+Server and Client Components
+Dynamic Routing
+Prisma ORM
+SQLite
+Database Relations
+Many-to-Many Relationships
+Migrations
+Image Storage Architecture
+CRUD Workflows
+Admin and Visitor Flows
+>>>>>>> d97da2a307d5318759712cde7df5d8f0cf54f4f1
