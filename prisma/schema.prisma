@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Blog {
+  id        String      @id @default(cuid())
+  title     String
+  slug      String      @unique
+  excerpt   String
+  content   String
+  tags      String      @default("")
+  published Boolean     @default(false)
+  createdAt DateTime    @default(now())
+  authorId  String      @default("u1")
+
+  images    BlogImage[]
+}
+
+model Image {
+  id        String      @id @default(cuid())
+  filename  String
+  url       String
+  createdAt DateTime    @default(now())
+
+  blogs     BlogImage[]
+}
+
+model BlogImage {
+  blogId  String
+  imageId String
+
+  blog  Blog  @relation(fields: [blogId], references: [id], onDelete: Cascade)
+  image Image @relation(fields: [imageId], references: [id], onDelete: Cascade)
+
+  @@id([blogId, imageId])
+}
+
